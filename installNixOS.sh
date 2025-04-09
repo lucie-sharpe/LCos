@@ -62,10 +62,13 @@ echo "Generating NixOS configuration..."
 sudo nixos-generate-config --root /mnt
 sudo rm /mnt/etc/nixos/configuration.nix
 
+sudo mkdir -p /mnt/etc/nixos/.tracked_config
 sudo git clone https://github.com/lucie-sharpe/LCos.git /mnt/etc/nixos/.tracked_config
+
 sudo ln -srf /mnt/etc/nixos/.tracked_config/flake.nix /mnt/etc/nixos/flake.nix
 sudo ln -srf /mnt/etc/nixos/.tracked_config/hosts/ /mnt/etc/nixos/hosts
 sudo ln -srf /mnt/etc/nixos/.tracked_config/modules/ /mnt/etc/nixos/modules
+sudi ln -srf /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/.tracked_config/hardware-configuration.nix
 
 # Install NixOS
 echo
