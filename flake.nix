@@ -23,6 +23,7 @@
         };
 
         modules = [
+          ./hardware-configuration.nix
           ./hosts/laptop/configuration.nix
         ];
       };
