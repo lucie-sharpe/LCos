@@ -7,7 +7,7 @@
       devices = [ "nodev" ];
       useOSProber = true;
       efiSupport = true;
-    }
+    };
   };
 }
 
