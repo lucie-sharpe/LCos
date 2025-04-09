@@ -9,8 +9,7 @@
       efiSupport = true;
       efiInstallAsRemovable = true;
     };
-    loader.uefi = {
-      canTouchEfiVariables = true;
+    loader.efi = {
       efiSysMountPoint = "/boot";
     };
   };
