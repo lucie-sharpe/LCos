@@ -6,6 +6,7 @@ in
 {
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" ];
+    auto-optimise-store = true;
   };
   nix.gc = {
     automatic = true;
@@ -29,6 +30,12 @@ in
     LC_TIME = "${defaultLocale}";
   };
   console.keyMap = "${consoleKeyMap}";
+
+  zramSwap = {
+    enable = enable;
+    algorithm = "lzo";
+    memoryPercent = 30;
+  };
 
   system.stateVersion = "24.11";
 }
