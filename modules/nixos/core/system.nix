@@ -32,7 +32,7 @@ in
   console.keyMap = "${consoleKeyMap}";
 
   zramSwap = {
-    enable = enable;
+    enable = true;
     algorithm = "lzo";
     memoryPercent = 30;
   };
