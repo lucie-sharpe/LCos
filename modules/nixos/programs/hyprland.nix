@@ -1,29 +1,23 @@
 { pkgs, ... }:
 
 {
-  programs.hyprland = {
-    enable = true;
+  programs = {
+    hyprland = {
+      enable = true;
+      portalPackage = pkgs.xdg-desktop-portal-hyprland; # xdph none git
+  	  xwayland.enable = true;
+    };
+
+    xwayland.enable = true;
+    waybar.enable = true;
   };
+    
 
   environment.systemPackages = with pkgs; [
-    # System
-    curl
-    git
-    htop
-    wget
-    libnotify
-    # xdg-user-dirs
-    # xdg-utils
-    
-    # Hyprland
     kitty
-    waybar
     rofi-wayland
     swaynotificationcenter
     swww
-
-    # Apps
-    firefox
   ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
