@@ -1,4 +1,19 @@
 #!/bin/bash
+
+/*
+Improvements:
+- Add option to change hostname
+- Add option to change username
+- Add option to change password
+- Add option to change timezone
+- Add option to change locale
+- Add option to change keyboard layout
+
+- Add driver selection
+  - Nivida
+  - VM Guest Services
+*/
+
 echo "Starting NixOS installation script..."
 cd "${0%/*}"
 
